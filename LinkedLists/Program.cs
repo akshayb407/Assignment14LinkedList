@@ -6,13 +6,16 @@ namespace LinkedLists
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("======UC1========");
-            List<int> list = new List<int>();
-            list.Add(70);
-            list.Add(30);
-            list.Add(56);
-            Console.WriteLine(list);
+            Console.WriteLine("Welcome to LinkedList Program!");
+
+
+            LinkedList List = new LinkedList();
+            List.Add(56);
+            List.Add(30);
+            List.Add(70);
+
+            List.display();
+
         }
     }
 }
