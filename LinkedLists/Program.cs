@@ -7,14 +7,11 @@ namespace LinkedLists
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to LinkedList Program!");
-
-
-            LinkedList List = new LinkedList();
-            List.Add(56);
-            List.Add(30);
-            List.Add(70);
-
-            List.display();
+            LinkedList<string> list = new LinkedList<string>();
+            list.Add("70");
+            list.Add("30");
+            list.Add("56");
+            list.display();
 
         }
     }

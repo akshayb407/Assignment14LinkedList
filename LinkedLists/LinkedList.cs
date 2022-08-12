@@ -6,28 +6,31 @@ using System.Threading.Tasks;
 
 namespace LinkedLists
 {
-    internal class LinkedList
+    internal class LinkedList<T>
     {
-        internal Node head;  //defined Node class 
-
-        internal void Add(int data)
+        public class Node
         {
-            Node node = new Node(data); //create an object of Node class pushimg data into node class
+            public T data;
+            public Node next;
+            public Node(T data)
+            {
+                this.data = data;
+            }
+        }
+        private Node head;
 
-            if (this.head == null)  //checking
+
+        public bool Add(T data)
+        {
+            Node n = new Node(data);
+            if (head == null)
             {
-                this.head = node; //then push this into head
+                head = n;
+                return true;
             }
-            else
-            {
-                Node temp = head;
-                while (temp.next != null)
-                {
-                    temp = temp.next;
-                }
-                temp.next = node;
-            }
-            Console.WriteLine("{0} inserted into LinkedList", node.data);
+            n.next = head;
+            head = n;
+            return true;
         }
 
 
@@ -46,6 +49,5 @@ namespace LinkedLists
                 temp = temp.next;
             }
         }
-
     }
 }
