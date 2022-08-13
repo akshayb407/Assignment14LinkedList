@@ -18,8 +18,27 @@ namespace LinkedLists
             }
         }
         private Node head;
+        //correct
+        public bool Append(T data)
+        {
+            Node n = new Node(data);
+            if (head == null)
+            {
+                head = n;
+                return true;
+            }
+
+            Node t = head;
+            while (t.next != null)
+            {
+                t = t.next;
+            }
+            t.next = n;
+            return true;
+        }
 
 
+        //correct
         public bool Add(T data)
         {
             Node n = new Node(data);
@@ -32,7 +51,6 @@ namespace LinkedLists
             head = n;
             return true;
         }
-
 
         internal void display() //to display the program
         {
@@ -49,5 +67,6 @@ namespace LinkedLists
                 temp = temp.next;
             }
         }
+
     }
 }
