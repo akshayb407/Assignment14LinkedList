@@ -12,8 +12,10 @@ namespace LinkedLists
             list.Append("30");
             list.Append("70");
             list.Insert(2,"40");
-            Console.WriteLine("final sequence post to the Insert operation: " + list);
-            
+            list.Remove(3);
+            Console.WriteLine("final sequence post to the Delete operation: " + list);
+
+
 
         }
     }
