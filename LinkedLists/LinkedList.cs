@@ -8,12 +8,10 @@ namespace LinkedLists
 {
     internal class LinkedList<T>
     {
-
         public class Node
         {
             public T data;
             public Node next;
-
             public Node(T data)
             {
                 this.data = data;
@@ -38,6 +36,7 @@ namespace LinkedLists
             t.next = n;
             return true;
         }
+
         public T Pop()
         {
             if (head == null)
@@ -86,7 +85,7 @@ namespace LinkedLists
             T obj = t.data;
             return obj;
         }
-       // [TestMethod]
+
         public bool Search(T data)
         {
             if (head == null)
@@ -107,7 +106,7 @@ namespace LinkedLists
                 return true;
             return false;
         }
-
+        //correct
         public int Size()
         {
             if (head == null)
@@ -151,7 +150,7 @@ namespace LinkedLists
             return s;
         }
 
-        public int Index(T data)
+        public int Index(int v, T data)
         {
             int count = -1;
             if (head == null)
@@ -163,6 +162,7 @@ namespace LinkedLists
                 if (t.data.Equals(data))
                     return count;
                 t = t.next;
+
             }
             return -1;
         }
@@ -190,6 +190,7 @@ namespace LinkedLists
             }
             throw new NullReferenceException("index is not in range");
         }
+
         public bool Remove(T data)
         {
             if (head == null)
@@ -225,6 +226,8 @@ namespace LinkedLists
                 pre = t;
                 t = t.next;
             }
+
+
             if (ind == 0)
             {
                 pre.next = t.next;
@@ -232,8 +235,9 @@ namespace LinkedLists
                 return obj;
             }
             throw new NullReferenceException("index is not range");
-        }
 
+
+        }
         public T[] ToArray()
         {
             int size = Size();
@@ -243,6 +247,21 @@ namespace LinkedLists
                 array[i] = peek(i);
             }
             return array;
+        }
+        internal void display() //to display the program
+        {
+
+            Node temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data + "");
+                temp = temp.next;
+            }
         }
 
     }

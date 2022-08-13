@@ -8,14 +8,12 @@ namespace LinkedLists
         {
             Console.WriteLine("Welcome to LinkedList Program!");
             LinkedList<string> list = new LinkedList<string>();
-         
-           
-           
-            list.Add("56");
-            list.Add("70");
-            Console.WriteLine("Before insertion: " + list);
-            list.Insert(1, "30");
-            Console.WriteLine("Status post to Insertion: " + list);
+            list.Append("56");
+            list.Append("30");
+            list.Append("70");
+            Console.WriteLine("Initial Sequence is :" + list);
+            list.Pop(0);
+            Console.WriteLine("final sequence post to the pop operation: " + list);
 
         }
     }
