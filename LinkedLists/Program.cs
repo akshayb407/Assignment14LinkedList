@@ -11,9 +11,8 @@ namespace LinkedLists
             list.Append("56");
             list.Append("30");
             list.Append("70");
-            list.Search("30");
-            Console.WriteLine(list);
-            
+            list.Insert(2,"40");
+            Console.WriteLine("final sequence post to the Insert operation: " + list);
             
 
         }
