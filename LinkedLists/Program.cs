@@ -11,9 +11,10 @@ namespace LinkedLists
             list.Append("56");
             list.Append("30");
             list.Append("70");
-            Console.WriteLine("Initial Sequence is :" + list);
-            list.Remove("70");
-            Console.WriteLine("final sequence post to the pop operation: " + list);
+            list.Search("30");
+            Console.WriteLine(list);
+            
+            
 
         }
     }
